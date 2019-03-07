@@ -27,7 +27,7 @@ public class SinkToMySQL extends RichSinkFunction<Student> {
     public void open(Configuration parameters) throws Exception {
         super.open(parameters);
         connection = getConnection();
-        String sql = "insert into Student(id, name, password, age) values(?, ?, ?, ?);";
+        String sql = "insert into student(id, name, password, age) values(?, ?, ?, ?);";
         ps = this.connection.prepareStatement(sql);
     }
 
